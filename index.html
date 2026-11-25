@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fuga de la base de Eggman</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Press+Start+2P&family=VT323&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="alarm a1"></div><div class="alarm a2"></div><div class="vig"></div>
+
+<audio id="bgm" src="audio/death-egg-robot.m4a" loop preload="auto"></audio>
+<button id="music" class="btn ghost music-btn" type="button" aria-pressed="false" aria-label="Activar o desactivar la música">♪ Música: no</button>
+
+<div class="wrap">
+
+  <section id="intro" class="intro">
+    <div class="intro-copy">
+      <h1>☠︎︎Fuga de la base de Eggman☠︎︎</h1>
+      <p class="lede">Tails entró por un respiradero y Sonic ya está en el pasillo. Detrás de ellos, Sage, selló cada puerta y activó la autodestrucción (°ロ°) !.</p>
+      <p>Para poder salir se nesecita desbloquear los candados. Se abren con matemáticas: un cálculo de consumo con trapecios, un par de sistemas de ecuaciones, tres secuencias y una deducción lógica.</p>
+      <ul class="rules">
+        <li>Tienes 30:00 antes de que la base explote.</li>
+        <li>Cada código incorrecto resta 0:20.</li>
+        <li>Cada pista resta 0:30. Hay tres por candado.</li>
+        <li>El reloj se detiene mientras cruzas una puerta.</li>
+      </ul>
+      <button id="start" class="btn primary" type="button">Iniciar misión</button>
+    </div>
+    <div class="plate"><div class="in">
+      <h2>Plano de la base</h2>
+      <svg id="map-intro" class="map"></svg>
+    </div></div>
+  </section>
+
+  <section id="game" hidden>
+    <div class="hud">
+      <div class="clock-wrap" role="timer">
+        <div id="clk" class="clock">30:00</div>
+        <div class="clock-label">Autodestrucción</div>
+        <div id="pen" class="pen" aria-hidden="true"></div>
+      </div>
+      <ol id="bolts" class="bolts" aria-label="Candados"></ol>
+      <div class="hud-title">Fuga de la base de Eggman</div>
+      <button id="mute" class="btn ghost" type="button" aria-pressed="false">Efectos: sí</button>
+    </div>
+    <div class="stage">
+      <aside class="side">
+        <div class="plate"><div class="in">
+          <h2>Plano de la base</h2>
+          <svg id="map" class="map"></svg>
+        </div></div>
+        <div class="plate"><div class="in">
+          <h2>Registro</h2>
+          <div id="log" class="log" aria-live="off"></div>
+        </div></div>
+      </aside>
+      <div id="cplate" class="plate console-plate"><div id="console" class="in"></div></div>
+    </div>
+  </section>
+
+  <section id="end" class="end" hidden>
+    <div class="end-copy">
+      <h1 id="end-h"></h1>
+      <p id="end-p"></p>
+      <dl id="stats" class="stats"></dl>
+      <button id="again" class="btn primary" type="button">Jugar de nuevo</button>
+    </div>
+    <div class="plate"><div class="in">
+      <h2>Plano de la base</h2>
+      <svg id="map-end" class="map"></svg>
+    </div></div>
+  </section>
+
+</div>
+
+<footer class="credits">
+  <h2>Créditos</h2>
+  <ul>
+    <li>Barbara Paulina Acevez Martinez</li>
+    <li>Ximena de Milagro Beltran Lopez</li>
+    <li>Karime Lizbeth Chavez Dorado</li>
+    <li>Dominic Covarrubias Piña</li>
+    <li>Axel Xavier Evangelista Callela</li>
+  </ul>
+  <p class="music-credit">Música: Death Egg Robot, de Sonic the Hedgehog 2 (OST)</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
